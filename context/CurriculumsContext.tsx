@@ -1,7 +1,5 @@
 import { createContext } from 'react';
 
-const CurriculumsContext = createContext({});
-
-
+const CurriculumsContext = createContext({})
 
 export default CurriculumsContext;

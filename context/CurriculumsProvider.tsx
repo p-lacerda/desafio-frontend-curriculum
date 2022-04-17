@@ -1,24 +1,33 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React, { useState } from 'react';
+import React from 'react';
 import CurriculumsContext from './CurriculumsContext';
+import { useForm, SubmitHandler } from "react-hook-form";
 
 interface CurriculumProps {
-  children: any;
+  children: any
 }
 
+type Inputs = {
+  example: string,
+  exampleRequired: string,
+};
+
 function CurriculumsProvider(props: CurriculumProps) {
-  const [counterItems, setCounter] = useState(1);
+  const { register, handleSubmit } = useForm<Inputs>();
+
+  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
 
   return (
     <CurriculumsContext.Provider
       value={{
-        counterItems,
-        setCounter,
+        register,
+        handleSubmit,
+        onSubmit,
       }}
     >
       {props.children}
     </CurriculumsContext.Provider>
-  );
+  )
 }
 
-export default CurriculumsProvider;
+export default CurriculumsProvider

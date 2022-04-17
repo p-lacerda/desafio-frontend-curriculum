@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 function SchoolFields() {
   return (
     <div>
