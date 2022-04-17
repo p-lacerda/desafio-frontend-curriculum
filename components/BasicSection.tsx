@@ -115,7 +115,7 @@ function BasicSection() {
           <option>Uruçuí</option>
         </select>
       </label>
-      <label htmlFor='objective'>
+      <label htmlFor="objective">
         Objetivo Profissional
         <textarea id="objective" {...register('objective')} />
       </label>

@@ -1,22 +1,29 @@
-import React, { useContext } from 'react'
-import CurriculumsContext from '../context/CurriculumsContext'
-import { SubmitContextType } from '../@types/curriculums'
+import React, { useContext } from 'react';
+import CurriculumsContext from '../context/CurriculumsContext';
+import { SubmitContextType } from '../@types/curriculums';
 
-import BasicSection from './BasicSection'
-import ExperienceSection from './ExperienceSection'
-import HabilitiesSection from './HabilitiesSection'
+import Router from 'next/router';
+import BasicSection from './BasicSection';
+import ExperienceSection from './ExperienceSection';
+import HabilitiesSection from './HabilitiesSection';
 
 function CurriculumForm() {
-  const { handleSubmit, onSubmit } = useContext(
+  const { handleSubmit, onSubmit, dataCurriculums } = useContext(
     CurriculumsContext
-  ) as SubmitContextType
+  ) as SubmitContextType;
+
+  const submitForm = () => {
+    localStorage.setItem('data', JSON.stringify(dataCurriculums));
+    Router.push('/');
+  };
+
   return (
     <div>
       <form onSubmit={handleSubmit(onSubmit)}>
         <BasicSection />
         <ExperienceSection />
         <HabilitiesSection />
-        <input type="submit" />
+        <button type="submit" onClick={() => submitForm()}>Enviar</button>
       </form>
     </div>
   )

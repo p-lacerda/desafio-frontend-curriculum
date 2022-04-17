@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React from 'react'
+import React, { useState } from 'react'
 import CurriculumsContext from './CurriculumsContext'
 import { useForm, SubmitHandler } from 'react-hook-form'
 
@@ -13,9 +13,11 @@ type Inputs = {
 }
 
 function CurriculumsProvider(props: CurriculumProps) {
+  const [dataCurriculums, setData] = useState<any[]>([]);
   const { register, handleSubmit } = useForm<Inputs>()
 
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data)
+  const onSubmit: SubmitHandler<any> = (data) => setData(prevState => [...prevState, data])
+
 
   return (
     <CurriculumsContext.Provider
@@ -23,6 +25,7 @@ function CurriculumsProvider(props: CurriculumProps) {
         register,
         handleSubmit,
         onSubmit,
+        dataCurriculums
       }}
     >
       {props.children}

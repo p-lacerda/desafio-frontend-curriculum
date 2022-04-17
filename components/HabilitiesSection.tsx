@@ -3,9 +3,8 @@ import React, { useContext } from 'react'
 import CurriculumsContext from '../context/CurriculumsContext'
 import { SubmitContextType } from '../@types/curriculums'
 
-
 function HabilitiesSection() {
-  const { register } = useContext(CurriculumsContext) as SubmitContextType;
+  const { register } = useContext(CurriculumsContext) as SubmitContextType
 
   return (
     <div>

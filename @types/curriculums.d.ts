@@ -11,4 +11,5 @@ export type SubmitContextType = {
   register(string, any?): void
   handleSubmit(onSubmit)
   onSubmit: SubmitHandler
+  dataCurriculums
 }

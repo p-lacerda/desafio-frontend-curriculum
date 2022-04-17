@@ -1,5 +1,5 @@
-import React from 'react';
-import SchoolFields from './SchoolFields';
+import React from 'react'
+import SchoolFields from './SchoolFields'
 // import WorkFields from './WorkFields';
 
 function ExperienceSection() {
