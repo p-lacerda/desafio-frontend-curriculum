@@ -1,21 +1,28 @@
-import React, { useContext } from 'react';
-import CurriculumsContext from '../context/CurriculumsContext';
-import { SubmitContextType } from '../@types/curriculums';
+import React, { useEffect } from 'react'
 
 function HomeScreen() {
-  const { dataCurriculums } = useContext(CurriculumsContext) as SubmitContextType;
+  // const [arrayData, setArrayData] = useState([]);
+
+  useEffect(() => {
+    console.log(localStorage.getItem("data"));
+    // setArrayData(JSON.parse(localStorage.getItem("data")))
+  }, [])
+
+  // const deleteCurriculum = () => {
+
+  // };
 
   return (
     <div>
-      {dataCurriculums.map(({ fullname }: { fullname: string }, i: number) => (
+      {/* {arrayData.map(({ fullname }: { fullname: string }, i: number) => (
         <div key={i}>
           <p>{fullname}</p>
           <button>Acessar currículo</button>
           <button>Remover currículo</button>
         </div>
-      ))}
+      ))} */}
     </div>
   )
 }
 
-export default HomeScreen;
+export default HomeScreen

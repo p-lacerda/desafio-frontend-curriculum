@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
-import Head from 'next/head';
-import Navbar from '../components/Navbar';
-import HomeScreen from '../components/HomeScreen';
+import Head from 'next/head'
+import Navbar from '../components/Navbar'
+import HomeScreen from '../components/HomeScreen'
 import styles from '../styles/Home.module.css'
 
 const Home: NextPage = () => {
