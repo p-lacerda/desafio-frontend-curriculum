@@ -5,11 +5,7 @@ const ProfessionalFormFields = [
   },
 ]
 
-const AddressFormFields = [
-  {
-
-  }
-]
+const AddressFormFields = [{}]
 
 const PersonalFormFields = [
   {

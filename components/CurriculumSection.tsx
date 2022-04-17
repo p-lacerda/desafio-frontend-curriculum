@@ -1,8 +1,8 @@
-import React from 'react';
-import InputComponent from './InputComponent';
+import React from 'react'
+import InputComponent from './InputComponent'
 
 type Props = {
-  title: string,
+  title: string
 }
 
 function CurriculumSection({ title }: Props) {
@@ -13,20 +13,18 @@ function CurriculumSection({ title }: Props) {
       <InputComponent name="Email" type="email" />
       <InputComponent name="Phone number" type="tel" />
       <InputComponent name="Birth date" type="date" />
-      <label htmlFor='gender'>
-        Gender:
-        Masculino
-        <input type="radio" name='gender' />
+      <label htmlFor="gender">
+        Gender: Masculino
+        <input type="radio" name="gender" />
         Feminino
-        <input type="radio" name='gender' />
+        <input type="radio" name="gender" />
         Não binário
-        <input type="radio" name='gender' />
+        <input type="radio" name="gender" />
         Prefiro não responder
-        <input type="radio" name='gender' />
+        <input type="radio" name="gender" />
       </label>
-      <label htmlFor='address'>
-        Your address:
-        Country:
+      <label htmlFor="address">
+        Your address: Country:
         <select>
           <option>Brasil</option>
         </select>
@@ -45,7 +43,6 @@ function CurriculumSection({ title }: Props) {
           <option>Uruçuí</option>
         </select>
       </label>
-
     </div>
   )
 }
