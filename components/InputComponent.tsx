@@ -1,14 +1,14 @@
 import React from 'react'
 
 type Props = {
-  name: string,
+  name: string
   type: string
 }
 
 function InputComponent({ name, type }: Props) {
   return (
     <label>
-      {name}
+      <p>{name}:</p>
       <input type={type} />
     </label>
   )

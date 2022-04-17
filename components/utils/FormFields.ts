@@ -1,20 +1,33 @@
+const ProfessionalFormFields = [
+  {
+    name: 'Full name:',
+    type: 'text',
+  },
+]
+
+const AddressFormFields = [
+  {
+
+  }
+]
+
 const PersonalFormFields = [
   {
-    name: 'Seu nome:',
-    type: 'text'
+    name: 'Full name:',
+    type: 'text',
   },
   {
-    name: 'Seu email:',
-    type: 'email'
+    name: 'Email:',
+    type: 'email',
   },
   {
-    name: 'Seu número de celular:',
-    type: 'tel'
+    name: 'Phone number:',
+    type: 'tel',
   },
   {
-    name: 'Sua data de nascimento:',
-    type: 'date'
+    name: 'Birth Date:',
+    type: 'date',
   },
-];
+]
 
-export { PersonalFormFields };
+export { PersonalFormFields, AddressFormFields, ProfessionalFormFields }

@@ -1,18 +1,31 @@
-import React from 'react';
-import { PersonalFormFields } from './utils/FormFields';
-import InputComponent from './InputComponent';
+import React from 'react'
+import CurriculumSection from './CurriculumSection';
 
 function CurriculumForm() {
   return (
     <div>
-      <h3>Add new curriculum</h3>
       <form>
+        <CurriculumSection
+          title="About you"
+        />
         <div>
-          {PersonalFormFields.map((field, i) => (
-            <InputComponent key={i} name={field.name} type={field.type} />
-          ))}
-          <button type="button">Add</button>
+          <h3>Your Experience</h3>
+          <button type="button">Add new school</button>
+          <button type="button">Add new job</button>
         </div>
+        <div>
+          <h3>Habilities</h3>
+          <input type="text" />
+          <button type="button">Add a new hability</button>
+
+          Github
+          <input type="text" />
+
+          Linkedin
+          <input type="text" />
+
+        </div>
+        <button type="button">Add New Curriculum</button>
       </form>
     </div>
   )
