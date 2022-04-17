@@ -9,13 +9,6 @@
     "lint": "next lint",
     "postinstall": "husky install"
   },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
-      "pre-commit": "npx tsc --noEmit && npm run lint . && npx prettier --write ."
-    }
-  },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.19.0",
     "eslint-config-prettier": "^8.5.0",
