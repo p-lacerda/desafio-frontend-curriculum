@@ -1,5 +1,6 @@
 import React from 'react';
 import SchoolFields from './SchoolFields';
+// import WorkFields from './WorkFields';
 
 function ExperienceSection() {
   return (
@@ -7,12 +8,12 @@ function ExperienceSection() {
       <h3>Your experience</h3>
       <div>
         <SchoolFields />
-
         <button type="button">Add new school</button>
+        {/* <WorkFields /> */}
         <button type="button">Add new job</button>
       </div>
     </div>
   )
 }
 
-export default ExperienceSection;
+export default ExperienceSection

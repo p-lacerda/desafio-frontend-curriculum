@@ -1,5 +1,5 @@
-import { createContext } from 'react';
+import { createContext } from 'react'
 
 const CurriculumsContext = createContext({})
 
-export default CurriculumsContext;
+export default CurriculumsContext

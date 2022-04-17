@@ -1,4 +1,4 @@
-import { SubmitHandler } from "react-hook-form";
+import { SubmitHandler } from 'react-hook-form'
 
 // export interface ITodo {
 //   id: number;
@@ -8,7 +8,7 @@ import { SubmitHandler } from "react-hook-form";
 // }
 
 export type SubmitContextType = {
-  register(string, any?): void,
-  handleSubmit(onSubmit),
+  register(string, any?): void
+  handleSubmit(onSubmit)
   onSubmit: SubmitHandler
-};
+}
